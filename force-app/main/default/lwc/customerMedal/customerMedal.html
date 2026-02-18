@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="EveryDrive Rewards" icon-name="standard:reward">
+        <div class="slds-p-around_medium slds-text-align_center">
+            <template if:true={customerData}>
+                <h1 class="slds-text-heading_large">{customerData.name}</h1>
+                <div class="slds-m-around_medium">
+                    <template if:true={customerData.medalUrl}>
+                        <img src={customerData.medalUrl} alt="Medalha de Nível" style="max-height: 150px;">
+                    </template>
+                </div>
+                <p class="slds-text-title_caps">Status: <strong>{customerData.tier}</strong></p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
